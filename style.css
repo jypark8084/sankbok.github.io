@@ -1,68 +1,167 @@
-/* style.css */
+/* 기본 설정 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f5f7fa; /* 은은한 배경색 */
     color: #333;
   }
   
-  .container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  h1 {
-    text-align: center;
-    color: #4CAF50;
+  .content {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
   }
   
-  .form-container {
-    margin-top: 20px;
+  /* 제목 스타일링 */
+  h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+  }
+  
+  /* 폼 스타일 */
+  .form-section {
+    margin-bottom: 40px;
   }
   
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   
-  label {
-    display: block;
-    margin-bottom: 5px;
+  /* 날짜 입력 필드 */
+  input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 300px; /* PC 기준 넓이를 제한 */
+  }
+  
+  /* 카테고리 가로 정렬 */
+  .horizontal-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  #category-options {
+    display: flex;
+    gap: 20px; /* 카테고리 버튼 간 간격 */
+  }
+  
+  #category-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 라디오 버튼과 텍스트 간격 */
+    font-size: 14px;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  #category-options input[type="radio"] {
+    transform: scale(1.2); /* 라디오 버튼 크기 확대 */
+    accent-color: #4CAF50; /* 라디오 버튼 색상 */
+  }
+  
+  /* 업무 내용 입력 */
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: none;
+    width: 100%;
+  }
+  
+  /* 버튼 스타일 */
+  .button-group {
+    display: flex;
+    gap: 15px; /* 버튼 간 간격 */
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     font-weight: bold;
   }
   
-  input[type="date"],
-  select,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  button {
-    display: block;
-    width: 100%;
-    padding: 10px;
+  .primary-btn {
     background-color: #4CAF50;
     color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
   }
   
-  button:hover {
+  .primary-btn:hover {
     background-color: #45a049;
+  }
+  
+  .secondary-btn {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
+  .secondary-btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* 테이블 스타일 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  table tbody tr:hover {
+    background-color: #f1f1f1; /* 테이블 행 호버 효과 */
+  }
+  
+  /* 반응형 디자인 - 모바일 대응 (선택적 추가 가능) */
+  @media (max-width: 768px) {
+    .horizontal-group {
+      flex-direction: column; /* 모바일에서 세로 정렬 */
+      gap: 10px;
+    }
+  
+    textarea {
+      font-size: 12px;
+    }
   }
   
